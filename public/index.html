@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://files.jser.im/vue.js"></script>
+  <script src="https://files.jser.im/jquery.js"></script>
+  <script src="https://files.jser.im/axios.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./imgs/push.ico" type="image/x-icon">
+  <title>推箱子</title>
+</head>
+<body>
+  <div id="app">
+    <div id="begin" @click="move">
+      开始游戏
+    </div>
+    <div id="map">
+      <div class="blocks" v-for="(index,i) in 15*15" v-bind:id="coord(index)"></div>
+    </div>
+  </div>
+  <div id="win">
+    恭喜过关！<br> 
+  </div>
+  <script src="./levels.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
