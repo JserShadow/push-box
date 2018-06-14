@@ -1,4 +1,4 @@
-var level = 0
+var level = 0;
 var app = new Vue({
   el: '#app',
   data: {
